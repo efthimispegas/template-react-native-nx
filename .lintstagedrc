@@ -1,0 +1,6 @@
+{
+  "libs/**/src/**/*.{ts,tsx,js,jsx}": [
+    "prettier --ignore-unknown --write",
+    "eslint --fix"
+  ]
+}

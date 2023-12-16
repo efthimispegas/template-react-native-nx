@@ -8,7 +8,18 @@
       }
     ]
   ],
-  "plugins": [],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": "./src",
+        "alias": {
+          "@types": "./src/@types"
+        }
+      }
+    ],
+    ["react-native-reanimated/plugin"]
+  ],
   "env": {
     "test": {
       "presets": ["module:metro-react-native-babel-preset"]

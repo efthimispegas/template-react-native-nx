@@ -1,0 +1,38 @@
+{
+  "name": "@template-monorepo/core",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.72.6"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "@react-native-community/eslint-config": "*",
+    "@react-native-community/netinfo": "*",
+    "@testing-library/react-hooks": "*",
+    "@types/enzyme-adapter-react-16": "*",
+    "@types/jest": "*",
+    "@types/node": "*",
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "babel-jest": "*",
+    "eslint": "*",
+    "eslint-plugin-babel": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-unused-imports": "*",
+    "husky": "*",
+    "cross-env": "*",
+    "jest": "*",
+    "commitizen": "*",
+    "metro-react-native-babel-preset": "*",
+    "prettier": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "react-native-background-timer": "*",
+    "react-native-fs": "*",
+    "react-native-keychain": "*",
+    "typescript": "*"
+  }
+}

@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@template-monorepo/foundation": ["libs/foundation/src/index.ts"]
+      "@template-monorepo/core": ["libs/core/src/index.ts"],
+      "@template-monorepo/core/*": ["libs/core/*"],
+      "@template-monorepo/foundation": ["libs/foundation/src/index.ts"],
+      "@template-monorepo/foundation/*": ["libs/foundation/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]
