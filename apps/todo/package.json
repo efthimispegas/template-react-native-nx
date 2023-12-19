@@ -82,7 +82,8 @@
     "react-test-renderer": "*",
     "ts-jest": "*",
     "ts-node": "*",
-    "react-native-vector-icons": "*"
+    "react-native-vector-icons": "*",
+    "@types/react-native-vector-icons": "*"
   },
   "devDependencies": {
     "@babel/core": "*",
