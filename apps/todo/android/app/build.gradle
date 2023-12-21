@@ -84,7 +84,9 @@ android {
 
         testBuildType System.getProperty('testBuildType', 'debug')
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
-
+        manifestPlaceholders = [
+            appAuthRedirectScheme: 'com.todo.auth'
+        ]
     }
     signingConfigs {
         debug {

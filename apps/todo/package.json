@@ -13,6 +13,7 @@
     "react-redux": "*",
     "@react-navigation/core": "*",
     "@react-navigation/native": "*",
+    "@react-navigation/drawer": "*",
     "@react-navigation/native-stack": "*",
     "@react-native/metro-config": "*",
     "@testing-library/jest-native": "*",
@@ -20,10 +21,12 @@
     "react-native-paper": "*",
     "react-native-snackbar": "*",
     "react": "*",
+    "qs": "*",
     "react-native": "*",
     "react-hook-form": "*",
     "react-native-svg": "*",
     "react-native-screens": "*",
+    "react-native-app-auth": "*",
     "react-native-safe-area-context": "*",
     "metro-config": "*",
     "react-native-svg-transformer": "*",
@@ -83,7 +86,9 @@
     "ts-jest": "*",
     "ts-node": "*",
     "react-native-vector-icons": "*",
-    "@types/react-native-vector-icons": "*"
+    "@types/react-native-vector-icons": "*",
+    "react-native-reanimated": "*",
+    "react-native-gesture-handler": "*"
   },
   "devDependencies": {
     "@babel/core": "*",

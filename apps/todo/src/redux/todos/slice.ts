@@ -20,13 +20,11 @@ export const todoSlice = createSlice({
   reducers: {
     addTodo: (state, action) => {
       const todoAlreadyExists = state.data.find(todo => todo.title === action.payload);
-      console.log(todoAlreadyExists);
       if (!todoAlreadyExists) {
         const todo: ITodo = {
           id: _.random(0, 99999),
           ...action.payload,
         };
-        console.log(todo);
         state.data.push(todo);
         state.totals += 1;
         Snackbar.show({
@@ -64,7 +62,6 @@ export const todoSlice = createSlice({
       state.error = initialState.error;
     });
     builder.addCase(allTodosAsyncThunk.fulfilled, (state, { payload }) => {
-      console.log('payload:', { payload });
       state.data = payload;
       state.totals = payload.length;
       state.isLoading = false;

@@ -11,7 +11,7 @@ import {
 } from '../../../@types/theme';
 import * as Variables from '../../../constants/theme';
 
-type BoxProps = {
+export interface BoxProps {
   m?: VaiableSizes; // margin
   ml?: VaiableSizes; // margin-left
   mr?: VaiableSizes; // margin-right
@@ -29,8 +29,8 @@ type BoxProps = {
   align?: AlignKeys<'row'>;
   justify?: AlignKeys<'col'> | Justifications;
   direction?: Directions;
-  classes?: Record<string, string>[];
-};
+  classes?: (Record<string, any> | undefined)[];
+}
 
 const Box: React.FC<PropsWithChildren<BoxProps>> = ({
   classes = [],
@@ -76,6 +76,7 @@ const styles = StyleSheet.create({
   // align
   center: {
     alignItems: 'center',
+    justifyContent: 'center',
   },
   top: {
     alignItems: 'flex-start',

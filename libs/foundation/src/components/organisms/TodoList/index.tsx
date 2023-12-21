@@ -51,7 +51,6 @@ const styles = StyleSheet.create({
   hero: {
     borderRadius: 12,
     backgroundColor: '#143055',
-    padding: 16,
     marginBottom: 24,
   },
 });

@@ -1,7 +1,5 @@
 /**
- *
  * Selectors
- *
  */
 
 import { createSelector } from '@reduxjs/toolkit';

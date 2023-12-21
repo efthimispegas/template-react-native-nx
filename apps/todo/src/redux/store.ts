@@ -7,9 +7,11 @@ import {
 import type { PreloadedState } from '@reduxjs/toolkit';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
+import { appState } from './app';
 import { todos } from './todos';
 
 const rootReducer = combineReducers({
+  appState,
   todos,
 });
 

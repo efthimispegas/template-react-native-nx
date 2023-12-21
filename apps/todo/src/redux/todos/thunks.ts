@@ -16,8 +16,6 @@ export const allTodosAsyncThunk = createAsyncThunk<ITodo[], string, IThunk>(
       return thunkApi.rejectWithValue(error);
     }
 
-    console.log('GET /todos/all: ', { data });
-
     return data;
   },
 );

@@ -4,7 +4,7 @@ import { FieldValues, useForm } from 'react-hook-form';
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 
-import { StackParamsList } from '../../../navigation/AppNavigator';
+import { StackParamsList } from '../../../navigation/RootNavigator';
 import useEditViewModel from '../../view-models/Edit/useEditViewModel';
 
 const defaultValues: FieldValues = {

@@ -1,20 +1,21 @@
 import React, { PropsWithChildren } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 
-type HeaderProps = {
+import Box, { BoxProps } from '../../atoms/Box';
+
+interface HeaderProps extends BoxProps {
   clippedGutters?: boolean;
-};
+}
 
-const Header: React.FC<PropsWithChildren<HeaderProps>> = ({ children, clippedGutters }) => {
-  return (
-    <View style={[styles.header, !clippedGutters ? styles.spacing : undefined]}>{children}</View>
-  );
+const Header: React.FC<PropsWithChildren<HeaderProps>> = ({
+  children,
+  clippedGutters,
+  classes = [],
+}) => {
+  return <Box classes={[!clippedGutters ? styles.spacing : undefined, ...classes]}>{children}</Box>;
 };
 
 const styles = StyleSheet.create({
-  header: {
-    marginVertical: 24,
-  },
   spacing: {
     padding: 12,
   },

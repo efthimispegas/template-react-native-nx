@@ -1,17 +1,17 @@
 import React, { PropsWithChildren, ReactNode } from 'react';
-import { StyleSheet, Text } from 'react-native';
+import { StyleSheet, Text, TextProps } from 'react-native';
 
 import { ThemeVariables } from '../../../@types/theme';
 import * as Variables from '../../../constants/theme';
 import { ellipsis } from '../../../utils';
 
-type TypographyProps = {
+interface TypographyProps extends TextProps {
   variant: 'h1' | 'h2' | 'h3' | 'h4' | 'body' | 'caption';
   color?: 'primary' | 'secondary' | 'text' | 'error';
   align?: 'left' | 'center' | 'right';
   noEllipsis?: boolean;
   children?: string | ReactNode;
-};
+}
 
 const Typography: React.FC<PropsWithChildren<TypographyProps>> = ({
   children,

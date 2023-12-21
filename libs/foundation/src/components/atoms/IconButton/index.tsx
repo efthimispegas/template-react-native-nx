@@ -1,16 +1,17 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
 
+import { IconProps } from 'react-native-vector-icons/Icon';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-type IconButtonProps = {
+interface IconButtonProps extends IconProps {
   name: string;
   size?: number;
   color?: string;
   containerClasses?: Record<string, string>[];
   classes?: Record<string, string>[];
   onIconPress: () => void;
-};
+}
 
 const IconButton: React.FC<IconButtonProps> = ({
   name,
@@ -26,26 +27,5 @@ const IconButton: React.FC<IconButtonProps> = ({
     </TouchableOpacity>
   );
 };
-
-const styles = StyleSheet.create({
-  textCenter: {
-    textAlign: 'center',
-    color: '#ffffff',
-  },
-  textMd: {
-    fontSize: 18,
-  },
-  buttonContainer: {
-    padding: 16,
-  },
-  fullWidth: {
-    width: '100%',
-  },
-  button: {
-    backgroundColor: '#143055',
-    borderRadius: 4,
-    padding: 16,
-  },
-});
 
 export default IconButton;

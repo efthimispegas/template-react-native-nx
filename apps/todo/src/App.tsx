@@ -3,7 +3,7 @@ import { SafeAreaView, StyleSheet, ScrollView, StatusBar } from 'react-native';
 import { ThemeProvider } from 'react-native-paper';
 import { Provider } from 'react-redux';
 
-import AppNavigator from './navigation/AppNavigator';
+import AppNavigator from './navigation/RootNavigator';
 import store from './redux/store';
 
 export const App = () => {

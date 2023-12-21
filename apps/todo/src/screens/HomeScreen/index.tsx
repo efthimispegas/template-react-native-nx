@@ -12,13 +12,13 @@ const HomeScreen = () => {
 
   return (
     <ScrollView>
-      <Header clippedGutters>
+      <Header p={'xs'}>
         <Typography color={'primary'} variant={'h2'}>
-          Hello there,
+          Todo App,
         </Typography>
         {/* eslint-disable-next-line jsx-a11y/accessible-emoji */}
         <Typography color={'primary'} variant={'h1'} noEllipsis>
-          Welcome to the Todo App 👋
+          Start organizing your day ✍️
         </Typography>
       </Header>
       <Section>

@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 
 import { addTodo } from '../../..//redux/todos';
-import { StackParamsList } from '../../../navigation/AppNavigator';
+import { StackParamsList } from '../../../navigation/RootNavigator';
 import { useDispatch } from '../../../redux/store';
 
 const defaultValues: FieldValues = {

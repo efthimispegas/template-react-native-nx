@@ -3,7 +3,7 @@ import { useCallback } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
 
-import { StackParamsList } from '../../../navigation/AppNavigator';
+import { StackParamsList } from '../../../navigation/RootNavigator';
 import { useDispatch } from '../../../redux/store';
 import { deleteTodo } from '../../../redux/todos';
 

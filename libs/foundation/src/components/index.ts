@@ -5,9 +5,11 @@ export { default as Typography } from './atoms/Typography';
 export { default as Box } from './atoms/Box';
 export { default as IconButton } from './atoms/IconButton';
 
+export { default as LabelValue } from './molecules/LabelValue';
 export { default as TodoItem } from './molecules/TodoItem';
 export { default as Header } from './molecules/Header';
 export { default as Section } from './molecules/Section';
 export { default as Container } from './molecules/Container';
 
 export { default as TodoList } from './organisms/TodoList';
+export { default as CustomDrawer } from './organisms/Drawer';

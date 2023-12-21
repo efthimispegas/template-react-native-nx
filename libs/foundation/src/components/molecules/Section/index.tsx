@@ -38,22 +38,19 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
   },
   section: {
-    marginVertical: 20,
+    marginVertical: 8,
   },
   spacing: {
     padding: 16,
   },
   center: {
     alignItems: 'center',
-    // justifyContent: 'center',
   },
   left: {
     alignItems: 'flex-start',
-    // justifyContent: 'flex-start',
   },
   right: {
     alignItems: 'flex-end',
-    // justifyContent: 'center',
   },
   stretch: {
     alignItems: 'stretch',
