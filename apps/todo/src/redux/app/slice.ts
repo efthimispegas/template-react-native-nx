@@ -26,6 +26,7 @@ export const appSlice = createSlice({
       state.error = null;
     },
   },
+  extraReducers: builder => {},
 });
 
 /**

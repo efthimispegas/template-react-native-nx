@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { ThemeVariables, Gutters } from '../src/@types/theme';
+import { ThemeVariables, Gutters } from '../../src/@types/theme';
 
 export const useGutters = ({ MetricsSizes }: ThemeVariables): Gutters => {
   return StyleSheet.create(

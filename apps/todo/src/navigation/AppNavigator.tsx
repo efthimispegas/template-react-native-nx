@@ -32,10 +32,6 @@ const MenuIcon = () => (
   </Box>
 );
 
-// TODO: Add auth navigator with loading screen
-// TODO: Add user info inside the home screen
-// TODO: Customize the Home header to show user name
-// TODO: Add logout functionality to header right icon
 function AppNavigator() {
   const userInfo = useSelector(selectUserInfo);
   const headerTitle = `Welcome back, ${userInfo?.given_name}`;

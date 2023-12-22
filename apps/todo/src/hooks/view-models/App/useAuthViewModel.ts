@@ -1,13 +1,16 @@
-import { useCallback, useEffect } from 'react';
-import { authorize, AuthConfiguration } from 'react-native-app-auth';
+import { useCallback } from 'react';
+import { authorize, logout, LogoutConfiguration, AuthConfiguration } from 'react-native-app-auth';
 import Keychain from 'react-native-keychain';
 
+import { authConfig } from '../../../config/global';
 import { selectAuthData, setAuthData, setUserInfo } from '../../../redux/app';
 import { useDispatch, useSelector } from '../../../redux/store';
 
-export const useAuthViewModel = (config: AuthConfiguration) => {
+export const useAuthViewModel = (
+  config: AuthConfiguration,
+): [promptAsync: () => Promise<void>, logoutAsync: () => Promise<void>] => {
   const dispatch = useDispatch();
-  const { hasLoggedInOnce } = useSelector(selectAuthData);
+  const { hasLoggedInOnce, idToken } = useSelector(selectAuthData);
 
   const promptAsync = useCallback(async () => {
     try {
@@ -24,7 +27,6 @@ export const useAuthViewModel = (config: AuthConfiguration) => {
           })
             .then(response => response.json())
             .then(json => {
-              // setUserInfo(json);
               dispatch(setUserInfo(json));
             })
             .catch(error => {
@@ -35,6 +37,7 @@ export const useAuthViewModel = (config: AuthConfiguration) => {
           setAuthData({
             hasLoggedInOnce: true,
             ...result,
+            idToken: result.tokenAdditionalParameters.refresh_token_id,
           }),
         );
       }
@@ -43,7 +46,26 @@ export const useAuthViewModel = (config: AuthConfiguration) => {
     }
   }, []);
 
-  useEffect(() => {
-    promptAsync();
+  const logoutAsync = useCallback(async () => {
+    try {
+      const logoutConfig: LogoutConfiguration = {
+        idToken,
+        postLogoutRedirectUrl: '',
+      };
+      console.log('===============');
+      console.log('[logout]:', { logoutConfig });
+      console.log('===============');
+      if (idToken) {
+        const result = await logout(authConfig, logoutConfig);
+        dispatch(setUserInfo(null));
+        dispatch(setAuthData(null));
+        await Keychain.resetGenericPassword({});
+        // }
+      }
+    } catch (error) {
+      console.log('Failed to log out', (error as Record<string, never>)?.message);
+    }
   }, []);
+
+  return [promptAsync, logoutAsync];
 };

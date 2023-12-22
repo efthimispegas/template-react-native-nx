@@ -1,7 +1,6 @@
 import React, { PropsWithChildren } from 'react';
 import { StyleSheet, View } from 'react-native';
 
-import { useGutters } from '../../../../hooks/theme';
 import {
   AlignKeys,
   Directions,
@@ -10,6 +9,7 @@ import {
   VaiableSizes,
 } from '../../../@types/theme';
 import * as Variables from '../../../constants/theme';
+import { useGutters } from '../../../hooks/theme';
 
 export interface BoxProps {
   m?: VaiableSizes; // margin

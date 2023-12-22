@@ -8,6 +8,7 @@ import type { PreloadedState } from '@reduxjs/toolkit';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
 import { appState } from './app';
+import { apiErrorMiddleware } from './middlewares';
 import { todos } from './todos';
 
 const rootReducer = combineReducers({
@@ -15,11 +16,23 @@ const rootReducer = combineReducers({
   todos,
 });
 
+const middlewares = [
+  /* extra middleware here */
+  apiErrorMiddleware,
+];
+
+if (__DEV__) {
+  const createDebugger = require('redux-flipper').default;
+  middlewares.push(createDebugger());
+}
+
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: getDefaultMiddleware => getDefaultMiddleware(),
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({ immutableCheck: false }).concat(...middlewares),
   devTools: !!(process.env.NODE_ENV && process.env.NODE_ENV === 'development'),
 });
+
 export const preloadedStore = (preloadedState?: PreloadedState<RootState>) => {
   return configureStore({
     reducer: rootReducer,
