@@ -14,7 +14,9 @@ const TodoItem: React.FC<TodoItemProps> = ({ id, title, onPress }) => {
   return (
     <Box pv={'xs'} direction={'row'} align={'center'} justify={'between'}>
       <Box>
-        <Typography variant={'h4'}>{title}</Typography>
+        <Typography variant={'h4'} color={'textLight'}>
+          {title}
+        </Typography>
       </Box>
       <Box direction={'row'} justify={'right'}>
         <ActionIcon id={id} action={'edit'} onIconPress={onPress} />

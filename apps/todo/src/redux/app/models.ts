@@ -1,6 +1,6 @@
 import { AuthorizeResult } from 'react-native-app-auth';
 
-import { IErrorResponse } from '@template-monorepo/foundation';
+import { IErrorResponse } from '@template-monorepo/core';
 
 import { AppDispatch, RootState } from '../store';
 

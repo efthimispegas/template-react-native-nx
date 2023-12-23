@@ -9,8 +9,8 @@ module.exports = custom({
   jiraAppend: ': ',
   scopes: [
     'foundation',
+    'core',
     'todo',
-    'vrs',
     'release',
     'monorepo'
   ]

@@ -13,9 +13,9 @@ export const Colors = {
   inputBackground: '#FFFFFF',
   white: '#ffffff',
   // Typography
-  textBlack: '#000000',
+  textDark: '#000000',
   textGray: '#4D4D4D',
-  textWhite: '#ffffff',
+  textLight: '#ffffff',
   primary: '#143055',
   secondary: '#28a745',
   success: '#28a745',
@@ -29,12 +29,12 @@ export const Colors = {
  * FontSize
  */
 export const FontSize = {
-  xs: 14, // caption
-  sm: 18, // body
-  md: 20, // h4
-  lg: 24, // h3
-  xl: 32, // h2
-  xxl: 48, // h1
+  caption: 14, // xs
+  body: 18, // sm
+  h4: 20, // md
+  h3: 24, // lg
+  h2: 32, // xl
+  h1: 48, // xxl
 };
 
 /**

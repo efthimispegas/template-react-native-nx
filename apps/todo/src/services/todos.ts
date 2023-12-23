@@ -8,7 +8,7 @@ import {
   ITodoRepository,
   ITodosByQueryUseCase,
   TodoRepositoryImpl,
-} from '@template-monorepo/foundation';
+} from '@template-monorepo/core';
 
 import { apiProvider } from '../api';
 

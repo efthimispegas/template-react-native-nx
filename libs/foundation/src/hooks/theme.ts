@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { ThemeVariables, Gutters } from '../../src/@types/theme';
+import { ThemeVariables, Gutters, Fonts } from '../../src/@types/theme';
 
 export const useGutters = ({ MetricsSizes }: ThemeVariables): Gutters => {
   return StyleSheet.create(
@@ -55,4 +55,77 @@ export const useGutters = ({ MetricsSizes }: ThemeVariables): Gutters => {
       {},
     ) as Gutters,
   );
+};
+
+export const useFonts = ({ FontSize, Colors }: ThemeVariables): Fonts => {
+  return StyleSheet.create({
+    /* Font sizes */
+    caption: {
+      fontSize: FontSize.caption,
+    },
+    body: {
+      fontSize: FontSize.body,
+    },
+    h4: {
+      fontSize: FontSize.h4,
+    },
+    h3: {
+      fontSize: FontSize.h3,
+    },
+    h2: {
+      fontSize: FontSize.h2,
+    },
+    h1: {
+      fontSize: FontSize.h1,
+    },
+    /* Text alignment */
+    center: {
+      textAlign: 'center',
+    },
+    justify: {
+      textAlign: 'justify',
+    },
+    left: {
+      textAlign: 'left',
+    },
+    right: {
+      textAlign: 'right',
+    },
+    /* Colors */
+    primary: {
+      color: Colors.primary,
+    },
+    secondary: {
+      color: Colors.secondary,
+    },
+    textLight: {
+      color: Colors.textLight,
+    },
+    textDark: {
+      color: Colors.textDark,
+    },
+    textGray: {
+      color: Colors.textGray,
+    },
+    error: {
+      color: Colors.error,
+    },
+    /** Font weight */
+    bold: {
+      fontStyle: 'normal',
+      fontWeight: 'bold',
+    },
+    italic: {
+      fontStyle: 'italic',
+      fontWeight: 'normal',
+    },
+    regular: {
+      fontStyle: 'normal',
+      fontWeight: '400',
+    },
+    black: {
+      fontStyle: 'normal',
+      fontWeight: '800',
+    },
+  });
 };

@@ -1,4 +1,4 @@
-import { ITodo } from '@template-monorepo/foundation';
+import { ITodo } from '@template-monorepo/core';
 
 export type InitialState = {
   data: ITodo[];

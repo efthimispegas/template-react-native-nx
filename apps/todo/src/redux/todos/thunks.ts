@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { ITodo, StateEnum } from '@template-monorepo/foundation';
+import { ITodo, StateEnum } from '@template-monorepo/core';
 
 import { getTodos } from '../../services/todos';
 import { IThunk } from '../app/models';
